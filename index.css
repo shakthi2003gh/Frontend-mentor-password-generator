@@ -170,3 +170,40 @@ h1 {
     width: 21px;
   }
 }
+
+.password-options {
+  display: grid;
+  gap: 0.65rem;
+  margin-block: 1.5rem;
+}
+
+.input-group input {
+  display: none;
+}
+
+.input-group label {
+  position: relative;
+  font-size: 0.8em;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.input-group label::before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: "";
+  width: 1.2em;
+  aspect-ratio: 1;
+  border: 2px solid var(--clr-text);
+}
+
+.input-group label:hover::before,
+.input-group input:checked + label::before {
+  border-color: var(--clr-accent);
+}
+
+.input-group input:checked + label::before {
+  background: url(./assets/icon-check.svg) no-repeat center, var(--clr-accent);
+  background-size: cover;
+}
