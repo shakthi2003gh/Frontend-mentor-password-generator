@@ -207,3 +207,66 @@ h1 {
   background: url(./assets/icon-check.svg) no-repeat center, var(--clr-accent);
   background-size: cover;
 }
+
+.password-strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 0.5rem;
+  padding: 0.9em;
+  background-color: var(--bg-secondary);
+}
+
+.password-strength .label {
+  font-size: 0.9em;
+  opacity: 0.45;
+}
+
+.strength-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.strength-level .status {
+  font-size: 1.4em;
+}
+
+.strength-level .bars {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.bars .bar {
+  width: 10px;
+  aspect-ratio: 6/14;
+  border: 2px solid var(--clr-text);
+}
+
+.bars[data-level="1"] .bar:first-child {
+  border-color: var(--clr-too-weak);
+  background-color: var(--clr-too-weak);
+}
+
+.bars[data-level="2"] .bar:nth-child(-n + 2) {
+  border-color: var(--clr-weak);
+  background-color: var(--clr-weak);
+}
+
+.bars[data-level="3"] .bar:nth-child(-n + 3) {
+  border-color: var(--clr-meduim);
+  background-color: var(--clr-meduim);
+}
+
+.bars[data-level="4"] .bar:nth-child(-n + 4) {
+  border-color: var(--clr-strong);
+  background-color: var(--clr-strong);
+}
+
+@media (width > 335px) {
+  .strength-level {
+    flex-direction: row;
+  }
+}
