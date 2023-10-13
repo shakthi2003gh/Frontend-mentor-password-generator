@@ -14,13 +14,25 @@
     <h1>Password Generator</h1>
 
     <div class="password-field">
-        <div class="password-display">
+        <div class="password-display no-text-overflow">
             <span class="placeholder">P4$5W0rD!</span>
         </div>
 
         <button class="copy-btn">
             <img src="./assets/icon-copy.svg" alt="copy password" class="copy">
         </button>
+    </div>
+
+    <div class="password-settings">
+        <div class="character-length">
+            <div class="header">
+                <span class="heading no-text-overflow">Character Length</span>
+
+                <span class="count">10</span>
+            </div>
+
+            <input class="slider" type="range" min="1" max="20" value="10">
+        </div>
     </div>
 </body>
 
